@@ -19,7 +19,8 @@ PRIMARY KEY (`emp_no`,`from_date`));
 
 --答案
 select e.emp_no,s.salary from employees e
-join salaries s on e.emp_no = s.emp_no and s.from_date = e.hire_date
+join salaries s on e.emp_no = s.emp_no
+where s.from_date = e.hire_date
 order by e.emp_no desc
 
 -- 查找薪水变动超过15次的员工号emp_no以及其对应的变动次数t
